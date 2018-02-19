@@ -1,0 +1,54 @@
+@charset "utf-8";
+/*页面初始化*/
+*,::before,::after{
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent; /*清除移动端默认的点击高亮效果*/
+    box-sizing: border-box; /*从边框开始计算盒子大小*/
+    -webkit-box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    font-family: "microsoft yahei",sans-serif; /*sans-serif系统默认字体*/
+    color: #333;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;/*移动端没有悬浮效果，要点击后才会有*/
+}
+input{
+    border: none;
+    outline: none;/*清除点击后阴影效果*/
+    -webkit-appearance: none;/*设置当前表单类型，清除默认的表单样式*/
+}
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+ul,ol{
+    list-style: none;
+}
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    height: 0;
+    line-height: 0;
+    display:block;/*将文本转为块级元素*/
+    visibility: hidden;/*将元素隐藏*/
+    clear: both;
+}
+.clearfix{
+    zoom: 1;/*为了兼容IE*/
+}
+/*给所有icon_开头的选择器加上以下css*/
+[class^="icon_"]{
+    background: url("../image/jd-sprites.png") no-repeat; /*添加精灵图*/
+    -webkit-background-size: 200px 200px;
+    background-size: 200px 200px;/*图片压缩一倍，防止失真*/
+}
