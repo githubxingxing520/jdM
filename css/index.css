@@ -13,6 +13,7 @@
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 100;
 }
 .jd_header > .jd_header-box{
     width: 100%;
@@ -64,3 +65,78 @@
     top: 10px;
     left: 85px;
 }
+/*轮播图css*/
+.jd_banner{
+    width: 100%; /*高度无法确定，自适应的时候高度会变*/
+    position: relative;
+    overflow: hidden;
+}
+.jd_banner > ul:first-child{
+    width: 1000%; /*放十个li*/
+    transform: translateX(-10%);
+    -webkit-transform: translateX(-10%);
+}
+.jd_banner > ul:first-child > li{
+    width: 10%;
+    float: left;
+}
+.jd_banner > ul:first-child > li > a{
+    width: 100%;
+    display: block;
+}
+.jd_banner > ul:first-child > li > a >img{
+    width: 100%;
+    display: block; /*图片下面4px间隙问题(跟文本基线对齐有关)*/
+}
+.jd_banner > ul:last-child{
+    width: 118px;
+    height: 6px;
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    margin-left:-59px;
+}
+.jd_banner > ul:last-child > li{
+    width: 6px;
+    height: 6px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    float: left;
+    margin-left: 10px;
+}
+.jd_banner > ul:last-child > li.active{
+    background-color: #fff;
+}
+.jd_banner > ul:last-child > li:nth-child(1){
+    margin-left: 0px;
+}
+/*导航栏css*/
+.jd_nav{
+    width: 100%;
+}
+.jd_nav>ul{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+.jd_nav>ul>li{
+    width: 25%;
+    float: left;
+}
+.jd_nav>ul>li>a{
+    display: block;
+}
+.jd_nav>ul>li>a>img{
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+.jd_nav>ul>li>a>p{
+    text-align: center;
+    color: #666;
+    height: 30px;
+    line-height: 30px;
+}
+
